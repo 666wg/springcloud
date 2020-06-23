@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8084/eureka
+spring:
+  application:
+    name: springcloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/666wg/config.git
+server:
+  port: 8083
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
