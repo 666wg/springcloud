@@ -11,10 +11,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>springcloud-client</module>
         <module>springcloud-eureka</module>
         <module>springcloud-config</module>
-        <module>springcloud-config2</module>
+        <module>springcloud-client</module>
     </modules>
 
 
