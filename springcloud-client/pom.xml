@@ -90,6 +90,8 @@
 			<id>dev</id>
 			<properties>
 				<profileActive>dev</profileActive>
+				<!-- 配置文件Git仓库 分支名 -->
+				<spring.cloud.config.label>dev</spring.cloud.config.label>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -100,6 +102,8 @@
 			<id>test</id>
 			<properties>
 				<profileActive>test</profileActive>
+				<!-- 配置文件Git仓库 分支名 -->
+				<spring.cloud.config.label>test</spring.cloud.config.label>
 			</properties>
 		</profile>
 		<profile>
@@ -107,6 +111,8 @@
 			<id>prod</id>
 			<properties>
 				<profileActive>prod</profileActive>
+				<!-- 配置文件Git仓库 分支名 -->
+				<spring.cloud.config.label>master</spring.cloud.config.label>
 			</properties>
 		</profile>
 	</profiles>

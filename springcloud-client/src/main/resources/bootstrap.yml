@@ -9,4 +9,5 @@ spring:
       discovery:
         enabled: true
         service-id: springcloud-config
+      label: @spring.cloud.config.label@
       profile: ${spring.profiles.active}
