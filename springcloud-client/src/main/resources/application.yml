@@ -6,3 +6,13 @@ spring:
 
 server:
   port: 8082
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      table-underline: true
+      db-type: mysql
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.xjw.springcloudclient.entity
