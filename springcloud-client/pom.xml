@@ -165,9 +165,10 @@
 				<executions>
 					<execution>
 						<id>Generate MyBatis Artifacts</id>
-						<!--maven生命周期-->
+						<!-- 要绑定的maven生命周期-->
 						<phase>none</phase>
 						<goals>
+							<!-- 要绑定的插件的目标-->
 							<goal>generate</goal>
 						</goals>
 					</execution>
@@ -189,21 +190,5 @@
 		</plugins>
 	</build>
 
-
-	<repositories>
-		<repository>
-			<id>releases</id>
-			<name>CloudCardCenterService_releases</name>
-			<url>http://1.119.162.197:58081/nexus/content/groups/public</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
 
 </project>
