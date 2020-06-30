@@ -1,0 +1,37 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8084/eureka
+
+spring:
+  application:
+    name: springcloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          #是否与服务发现组件进行结合，通过 serviceId转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+          enabled: true
+      routes: #负载均衡 路由代理
+        - id: springcloud-client         #随便命名
+          uri: lb://springcloud-client   #lb开头是使用到了eurake，ws是用到了websocket
+          predicates:
+            - Path=/springcloud-client/**   #请求路径带上该前缀
+            - Method=GET,POST
+          filters:
+            - StripPrefix=1 #与path配饰使用，转发去除前缀
+        - id: springcloud-config
+          uri: lb://SPRINGCLOUD-CONFIG
+          predicates:
+            - Path=/springcloud-config/**
+            - Method=GET,POST
+          filters:
+            - StripPrefix=1 #与path配饰使用，转发去除前缀
+        - id: ip
+          uri: http://localhost:8082/person/**
+          predicates:
+            - Path=/person/**
+            - Method=GET,POST
