@@ -1,0 +1,20 @@
+server:
+  port: 8086
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8084/eureka
+
+spring:
+  application:
+    name: springcloud-zipkin
+
+
+management:
+  metrics:
+    web:
+      server:
+        #zipkin报错无法访问，加此配置
+        auto-time-requests: false
+
