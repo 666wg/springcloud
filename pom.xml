@@ -15,6 +15,7 @@
         <module>springcloud-config</module>
         <module>springcloud-gateway</module>
         <module>springcloud-client</module>
+		<module>springcloud-zipkin</module>
     </modules>
 
 

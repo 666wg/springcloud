@@ -9,6 +9,15 @@ eureka:
 spring:
   application:
     name: springcloud-gateway
+
+  # 链路追踪
+  zipkin:
+    base-url: http://springcloud-zipkin/
+    discovery-client-enabled: false
+  sleuth:
+    sampler:
+      probability: 1.0  #1.0表示100%追踪，0.1表示10%追踪)
+
   cloud:
     gateway:
       discovery:
