@@ -23,6 +23,7 @@
 		<mysql.version>5.1.47</mysql.version>
 		<mybatis-plus-boot-starter.version>3.3.0</mybatis-plus-boot-starter.version>
 		<mybatis-generator.version>1.3.2</mybatis-generator.version>
+		<logback.version>1.2.3</logback.version>
 	</properties>
 
 	<dependencies>
@@ -86,6 +87,12 @@
 			<version>${mybatis-plus-boot-starter.version}</version>
 		</dependency>
 
+		<!--logback-->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -145,6 +152,7 @@
 					<include>application.yml</include>
 					<include>application-${profileActive}.yml</include>
 					<include>bootstrap.yml</include>
+					<include>logback-${profileActive}.xml</include>
 				</includes>
 				<excludes>
 					<exclude>generator.properties</exclude>

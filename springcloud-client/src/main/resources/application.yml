@@ -24,3 +24,7 @@ mybatis-plus:
       db-type: mysql
   mapper-locations: classpath:/mapper/*.xml
   type-aliases-package: com.xjw.springcloudclient.entity
+
+#日志
+logging:
+  config: classpath:logback-${spring.profiles.active}.xml
