@@ -9,19 +9,17 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xjw</groupId>
-    <artifactId>springcloud-zipkin</artifactId>
+    <artifactId>springcloud-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springcloud-zipkin</name>
-    <description>springcloud链路追踪</description>
+    <name>springcloud-admin</name>
+    <description>springcloud监控</description>
     <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
         <!-- spring boot对应的spring cloud版本 -->
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
-        <zipkin-server.version>2.12.3</zipkin-server.version>
-        <zipkin-autoconfigure-ui.version>2.12.3</zipkin-autoconfigure-ui.version>
-        <spring-boot-admin-starter-client.version>2.1.0</spring-boot-admin-starter-client.version>
+        <spring-boot-admin-starter-server.version>2.1.0</spring-boot-admin-starter-server.version>
     </properties>
 
     <dependencies>
@@ -33,23 +31,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin-server</artifactId>
-            <version>${zipkin-server.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin-autoconfigure-ui</artifactId>
-            <version>${zipkin-autoconfigure-ui.version}</version>
-        </dependency>
-
-        <!--admin监控客户端-->
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>${spring-boot-admin-starter-client.version}</version>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>${spring-boot-admin-starter-server.version}</version>
         </dependency>
 
         <dependency>
