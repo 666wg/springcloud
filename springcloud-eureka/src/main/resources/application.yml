@@ -1,12 +1,18 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8084/eureka
+      defaultZone: http://admin:admin@127.0.0.1:8084/eureka
     register-with-eureka: false
   server:
     enable-self-preservation: false
+
 spring:
   application:
     name: springcloud-eureka
+  security:
+    user:
+      name: admin
+      password: admin
+
 server:
   port: 8084
