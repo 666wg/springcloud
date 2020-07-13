@@ -24,7 +24,6 @@
 		<mybatis-plus-boot-starter.version>3.3.0</mybatis-plus-boot-starter.version>
 		<mybatis-generator.version>1.3.2</mybatis-generator.version>
 		<logback.version>1.2.3</logback.version>
-		<spring-boot-admin-starter-client.version>2.1.0</spring-boot-admin-starter-client.version>
 	</properties>
 
 	<dependencies>
@@ -54,13 +53,6 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
-		</dependency>
-
-		<!--admin监控客户端-->
-		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
-			<version>${spring-boot-admin-starter-client.version}</version>
 		</dependency>
 
 		<dependency>

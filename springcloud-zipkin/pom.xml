@@ -21,7 +21,6 @@
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <zipkin-server.version>2.12.3</zipkin-server.version>
         <zipkin-autoconfigure-ui.version>2.12.3</zipkin-autoconfigure-ui.version>
-        <spring-boot-admin-starter-client.version>2.1.0</spring-boot-admin-starter-client.version>
     </properties>
 
     <dependencies>
@@ -38,18 +37,17 @@
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-server</artifactId>
             <version>${zipkin-server.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-autoconfigure-ui</artifactId>
             <version>${zipkin-autoconfigure-ui.version}</version>
-        </dependency>
-
-        <!--admin监控客户端-->
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>${spring-boot-admin-starter-client.version}</version>
         </dependency>
 
         <dependency>
