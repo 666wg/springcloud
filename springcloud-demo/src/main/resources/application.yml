@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: @profileActive@
+  application:
+    name: springcloud-demo
+
+  # 链路追踪
+  zipkin:
+    base-url: http://springcloud-zipkin/
+    discovery-client-enabled: false
+  sleuth:
+    sampler:
+      probability: 1.0  #1.0表示100%追踪，0.1表示10%追踪)
+
+server:
+  port: 8087
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      table-underline: true
+      db-type: mysql
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.xjw.springcloudclient.entity
+
+#日志
+logging:
+  config: classpath:logback-${spring.profiles.active}.xml
